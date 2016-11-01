@@ -1,0 +1,9 @@
+from datetime import datetime
+sched = '10:33:26'
+# s2 = '11:15:49' # for example
+FMT = '%H:%M:%S'
+tdelta = datetime.strptime(s2, FMT) - datetime.strptime(s1, FMT)
+
+https://pymotw.com/2/sched/
+
+http://anh.cs.luc.edu/python/hands-on/3.1/handsonHtml/io.html

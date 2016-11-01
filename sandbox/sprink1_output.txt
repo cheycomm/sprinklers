@@ -1,0 +1,32 @@
+TimeStamp :16:48:41
+Sprinkler 5 on for 5secs
+
+Sprinkler 5 off
+Sprinkler 1 on for 10secs
+
+Sprinkler 1 off
+Sprinkler 2 on for 10secs
+
+Sprinkler 2 off
+Sprinkler 4 on for 10secs
+
+Sprinkler 4 off
+Sprinkler 3 on for 5secs
+
+TimeStamp :07:29:58
+Sprinkler 5 on for 5secs
+
+Sprinkler 5 off
+Sprinkler 1 on for 10secs
+
+Sprinkler 1 off
+Sprinkler 2 on for 10secs
+
+Sprinkler 2 off
+Sprinkler 4 on for 10secs
+
+Sprinkler 4 off
+Sprinkler 3 on for 5secs
+
+
+

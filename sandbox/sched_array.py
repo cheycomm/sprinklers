@@ -6,11 +6,10 @@ def print_time(a="default"):
 
 def print_some_times():
   print(time.time())
-  s.enter(60, 1, print_time)
-  s.enter(30, 2, print_time, argument=('positionnal',))
-  s.enter(30, 1, print_time, kwargs={'a': 'keyword'})
-  s.run()  
+  s.enter(10, 1, print_time)
+  s.enter(5, 2, print_time, argument=('positionnal',))
+  s.enter(5, 2000, print_time, kwargs={'a': 'keyword'})
+  s.run()
   print(time.time())
 
 print_some_times()
-

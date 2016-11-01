@@ -1,0 +1,32 @@
+#!/usr/bin/python
+import sched
+import time
+
+# localtime = time.asctime( time.localtime(time.time()) )
+# localtime = time.localtime(time.time())
+# print "Local current time :", localtime
+
+fmt = '%m/%d/%y %H:%M:%S'
+fmt_time = time.strftime(fmt)
+sched_time = time.mktime(time.strptime('10/29/16 09:15:00', fmt))
+tdelta = int(sched - time.mktime(time.time()))
+scheduler = sched.scheduler(time.time, time.sleep)
+
+def print_event(name):
+  print 'EVENT', time.strftime(fmt), name
+
+print_event('Start')
+print(tdelta)
+# scheduler.enter(tdelta, 1, print_event, ('09:15:00'))
+
+scheduler.run()
+print_event('Complete')
+
+
+
+
+# print "Unformatted time :", time.time()
+
+# print "08:54:00 :", sched_time
+
+# print "Delta :", tdelta
