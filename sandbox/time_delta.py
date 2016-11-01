@@ -3,9 +3,9 @@ import time, sched
 
 fmt = '%m/%d/%y %H:%M:%S'
 fmt_time = time.strftime(fmt)
-sched_time_str = '10/29/16 10:41:00'
+sched_time_str = '11/01/16 14:18:00'
 sched_time = time.mktime(time.strptime(sched_time_str, fmt))
-tdelta = int(sched_time - time.time())
+tdelta = int(sched_time - time.time()) + 1
 scheduler = sched.scheduler(time.time, time.sleep)
 
 def print_event(name="default"):

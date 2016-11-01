@@ -1,15 +1,23 @@
-#! python
-import sched, time
-s = sched.scheduler(time.time, time.sleep)
-def print_time(a="default"):
-  print("From print_time", time.time(), a)
+#!/usr/bin/python3
+import time
 
-def print_some_times():
-  print(time.time())
-  s.enter(10, 1, print_time)
-  s.enter(5, 2, print_time, argument=('positionnal',))
-  s.enter(5, 2000, print_time, kwargs={'a': 'keyword'})
-  s.run()
-  print(time.time())
+fmt_time = time.strftime('%H:%M:%S')
 
-print_some_times()
+filename = '/home/todd/projects/sandbox/sprink1_output.txt'
+fh = open(filename, 'w')
+
+sprinklers = [5,1,2,4,3]
+duration = [5,10,10,10,5]
+
+fh.write("TimeStamp :" + fmt_time + "\n")
+
+for x in range(0, 5):
+	if x > 0:
+	  text = str("Sprinkler " + str(sprinklers[x-1]) + " off\n")
+	  fh.write(text)
+	text = str("Sprinkler " + str(sprinklers[x]) + " on for " + str(duration[x]) + "secs\n\n")
+	fh.write(text)
+	time.sleep(duration[x])
+
+fh.write("\n\n")
+fh.close()
